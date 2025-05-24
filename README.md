@@ -7,10 +7,12 @@ NextJS uncommercial project which is created by using NextJS 15 latest features 
 ## Tech stack
 - React 19
 - Next.js 15
-- Sanity
+- PostgreSQL
+- Upstash
 - TailwindCSS
 - ShadCN
-- TypeScript
+- TypeScript\
+and more
 
 This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
 
