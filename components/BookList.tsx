@@ -14,12 +14,10 @@ const BookList = ({ title, books, containerClassName }: Props) => {
 
       <ul className="book-list">
         {books.map(book => (
-          <li key={book.id}>
-            <BookCard
-              key={book.title}
-              {...book}
-            />
-          </li>
+          <BookCard
+            key={book.title}
+            {...book}
+          />
         ))}
       </ul>
     </section>
