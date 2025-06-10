@@ -23,4 +23,5 @@ const BookList = ({ title, books, containerClassName }: Props) => {
     </section>
   )
 }
-export default BookList
+
+export default BookList;

@@ -53,14 +53,14 @@ const AuthForm = <T extends FieldValues>({
       });
 
       router.push("/");
-    } else {
-      toast({
-        title: `Error ${isSignIn ? "signing in" : "signing up"}`,
-        description: result.error ?? "An error occurred.",
-        variant: "destructive",
-      });
-  }
+      } else {
+        toast({
+          title: `Error ${isSignIn ? "signing in" : "signing up"}`,
+          description: result.error ?? "An error occurred.",
+          variant: "destructive",
+        });
     }
+  }
 
   return (
     <div className="flex flex-col gap-4">
