@@ -17,6 +17,7 @@ export const { handlers, signIn, signOut, auth } = NextAuth({
         password: { label: "Password", type: "password" }
       },
       async authorize(credentials) {
+        console.log('cred-in', credentials)
         if (!credentials?.email || !credentials?.password) {
           return null;
         }
@@ -27,12 +28,15 @@ export const { handlers, signIn, signOut, auth } = NextAuth({
           .where(eq(users.email, credentials.email.toString()))
           .limit(1);
 
+        console.log('db user', user)
+
         if (user.length === 0) return null;
 
         const isPasswordValid = await compare(
           credentials.password.toString(),
           user[0].password,
         );
+        console.log('pwd ok?', isPasswordValid)
 
         if (!isPasswordValid) return null;
 
