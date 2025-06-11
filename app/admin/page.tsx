@@ -1,7 +1,7 @@
 const Page = () => {
   return (
     <div>
-      Page
+      Admin Dashboard
     </div>
   );
 };
